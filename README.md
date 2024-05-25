@@ -60,7 +60,6 @@ Todo
 
 In progress
 --------------------------
-* create apis to connect blocks/workflows
 
 
 Completed
@@ -70,4 +69,5 @@ Completed
 * create apis to create block
 * create apis to create workflow
 * create apis to assign blocks/workflows to user
+* create apis to connect blocks/workflows
 
