@@ -1,17 +1,26 @@
+<div align="center">
 
-  ______          _ 
- |  ____|        | |
- | |__ _   _ _ __| |
- |  __| | | | '__| |
- | |  | |_| | |  | |
- |_|   \__,_|_|  |_|
+```
+    ______          _ 
+   |  ____|        | |
+   | |__ _   _ _ __| |
+   |  __| | | | '__| |
+   | |  | |_| | |  | |
+   |_|   \__,_|_|  |_|
+ 
+```
+</div>
                     
-                    
+<div align="center">
+Furl - A generic automation framework
+</div>
 
-Goal : All companies in the world can expose their client facing business workflows using a dot furl file. All users should be able to make any workflow automations using the publicly available workflows.
+
+Goal
 --------------------------
+All companies in the world can expose their client facing business workflows using a dot furl file. All users should be able to make any workflow automations using the publicly available workflows.
 
-Requirements. 
+Requirements
 --------------------------
 
 *  create blocks
@@ -34,7 +43,7 @@ Requirements.
 *  provide a few built in most commonly used workflows such as authentication etc 
 
 
-todo
+Todo
 --------------------------
 * create apis to edit block
 * create apis to edit workflow
@@ -49,15 +58,16 @@ todo
 * share workflows
 
 
-in-progress
+In progress
 --------------------------
 * create apis to connect blocks/workflows
 
 
-completed
+Completed
 --------------------------
 * create apis to create user
 * create apis to list user
 * create apis to create block
 * create apis to create workflow
 * create apis to assign blocks/workflows to user
+
