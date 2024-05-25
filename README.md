@@ -1,4 +1,3 @@
-============================
 
   ______          _ 
  |  ____|        | |
@@ -8,13 +7,10 @@
  |_|   \__,_|_|  |_|
                     
                     
-===========================
 
---------------------------
 Goal : All companies in the world can expose their client facing business workflows using a dot furl file. All users should be able to make any workflow automations using the publicly available workflows.
 --------------------------
 
---------------------------
 Requirements. 
 --------------------------
 
@@ -38,7 +34,6 @@ Requirements.
 *  provide a few built in most commonly used workflows such as authentication etc 
 
 
---------------------------
 todo
 --------------------------
 * create apis to edit block
@@ -54,13 +49,11 @@ todo
 * share workflows
 
 
---------------------------
 in-progress
 --------------------------
 * create apis to connect blocks/workflows
 
 
---------------------------
 completed
 --------------------------
 * create apis to create user
@@ -68,5 +61,3 @@ completed
 * create apis to create block
 * create apis to create workflow
 * create apis to assign blocks/workflows to user
-
-==========================
