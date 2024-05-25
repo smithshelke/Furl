@@ -9,5 +9,6 @@ import (
 type Workflows interface {
 	Create(ctx context.Context, workflow *domain.Workflow) (*domain.Workflow, error)
 	AssignUser(ctx context.Context, userID string, workflowIDs []string) error
+	CreateConnections(ctx context.Context, connections []domain.Connection) error
 	GetByUserID(userID string) ([]*domain.Workflow, error)
 }

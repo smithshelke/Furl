@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/smithshelke/flur/internal/adapters/web/blocks"
+	"github.com/smithshelke/flur/internal/adapters/web/connection"
 	"github.com/smithshelke/flur/internal/adapters/web/user"
 	"github.com/smithshelke/flur/internal/adapters/web/workflow"
 )
@@ -21,6 +22,9 @@ func (a *App) registerRoutes(router *http.ServeMux) {
 
 	blocksController := blocks.NewBlocksController(core.GraphAPI)
 	AddRoute(router, "POST /blocks", blocksController.Create)
+
+	connectionController := connection.NewConnectionController(core.GraphAPI)
+	AddRoute(router, "POST /connections", connectionController.Create)
 }
 
 func AddRoute(router *http.ServeMux, pattern string, handler func(http.ResponseWriter, *http.Request)) {

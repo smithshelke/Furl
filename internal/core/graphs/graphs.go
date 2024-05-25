@@ -46,6 +46,14 @@ func (g *GraphsAPI) AssignUserToWorkflows(ctx context.Context, userID string, wo
 	return err
 }
 
+func (g *GraphsAPI) CreateConnections(ctx context.Context, connections []domain.Connection) error {
+	err := g.WorkflowRepo.CreateConnections(ctx, connections)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 func (g *GraphsAPI) GetWorkflowByID(ID string) domain.Workflow {
 	return domain.Workflow{}
 }
