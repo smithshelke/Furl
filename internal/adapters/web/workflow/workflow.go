@@ -25,10 +25,17 @@ func (c *WorkflowController) Create(w http.ResponseWriter, r *http.Request) {
 		common.WriteError(w, err, common.BAD_REQUEST)
 		return
 	}
+
 	workflow, err := c.GraphsAPI.CreateWorkflow(r.Context(), CreateWorkflowRequestToWorkflow(request))
 	if err != nil {
 		common.WriteError(w, err, common.SOMETHING_WENT_WRONG)
 	}
+
+	err = c.GraphsAPI.AssignUserToWorkflows(r.Context(), request.CreatedBy, []string{workflow.ID})
+	if err != nil {
+		common.WriteError(w, err, common.SOMETHING_WENT_WRONG)
+	}
+
 	response, err := json.Marshal(WorkflowToCreateWorkflowResponse(workflow))
 	if err != nil {
 		common.WriteError(w, err, common.SOMETHING_WENT_WRONG)

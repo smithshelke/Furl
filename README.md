@@ -25,7 +25,7 @@ Requirements
 
 *  create blocks
 *  store configurations of blocks
-*  block can be of many types such as a network block, wait block,  cron block
+*  block can be of many types such as a network block, wait block, cron block
 *  make workflows from blocks
 *  each workflow should be executable
 *  each block can output the json
@@ -47,13 +47,13 @@ Todo
 --------------------------
 * create apis to edit block
 * create apis to edit workflow
+* create apis to edit user
 * create workflow runs
 * connect mysql for logs
 * connect redis
 * create WorflowRunEngine
-* create graph travesers
+* create graph traversers
 * create BlockExecutors
-* create apis to edit user
 * import workflows
 * share workflows
 

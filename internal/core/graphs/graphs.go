@@ -33,11 +33,6 @@ func (g *GraphsAPI) CreateWorkflow(ctx context.Context, workflow *domain.Workflo
 		return nil, err
 	}
 
-	err = g.WorkflowRepo.AssignUser(ctx, workflow.CreatedBy, []string{workflow.ID})
-	if err != nil {
-		return nil, err
-	}
-
 	return workflow, nil
 }
 
