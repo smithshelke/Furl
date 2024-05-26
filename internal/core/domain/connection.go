@@ -12,7 +12,7 @@ const (
 type NodeType int
 
 const (
-	BLOCK    NodeType = iota
+	BLOCK NodeType = iota
 	WORKFLOW
 	UNKNOWN_NODE_TYPE
 )

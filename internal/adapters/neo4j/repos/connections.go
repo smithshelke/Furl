@@ -13,7 +13,7 @@ func getConnectionType(connType domain.ConnectionType) (string, error) {
 		return "STARTS_WITH", nil
 	} else if connType == domain.ENDS_WITH {
 		return "ENDS_WITH", nil
-	}else {
+	} else {
 		return "", fmt.Errorf("Unsupported connection type: %d", connType)
 	}
 }

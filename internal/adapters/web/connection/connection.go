@@ -8,7 +8,6 @@ import (
 	"github.com/smithshelke/flur/internal/core/graphs"
 )
 
-
 type ConnectionController struct {
 	graphAPI *graphs.GraphsAPI
 }
