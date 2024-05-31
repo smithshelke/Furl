@@ -35,3 +35,14 @@ func (b *BlocksController) Create(w http.ResponseWriter, r *http.Request) {
 	bytes, _ := json.Marshal(response)
 	w.Write(bytes)
 }
+
+func (b *BlocksController) Execute(w http.ResponseWriter, r *http.Request) {
+	var response any
+	err := b.graphsAPI.ExecuteBlock(r.Context(), "123", &response)
+	if err != nil {
+		common.WriteError(w, err, common.SOMETHING_WENT_WRONG)
+		return
+	}
+	bytes, _ := json.Marshal(response)
+	w.Write(bytes)
+}

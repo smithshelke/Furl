@@ -45,6 +45,7 @@ Requirements
 
 Todo
 --------------------------
+* create block executor
 * create apis to edit block
 * create apis to edit workflow
 * create apis to edit user
@@ -53,13 +54,13 @@ Todo
 * connect redis
 * create WorflowRunEngine
 * create graph traversers
-* create BlockExecutors
 * import workflows
 * share workflows
 
 
 In progress
 --------------------------
+* model and design network block executor
 
 
 Completed

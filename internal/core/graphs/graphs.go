@@ -2,8 +2,10 @@ package graphs
 
 import (
 	"context"
+	"log"
 
 	"github.com/smithshelke/flur/internal/core/domain"
+	"github.com/smithshelke/flur/internal/core/graphs/executors/blocks/network"
 	"github.com/smithshelke/flur/internal/ports/db"
 )
 
@@ -47,6 +49,26 @@ func (g *GraphsAPI) CreateConnections(ctx context.Context, connections []domain.
 		return err
 	}
 	return nil
+}
+
+func (g *GraphsAPI) ExecuteBlock(ctx context.Context, blockID string, response *any) error {
+	outputHandler := func(output any) {
+		networkOutput := output.(network.NetworkBlockOutput)
+		log.Printf("Output: %d \n", networkOutput.StatusCode)
+		*response = networkOutput
+	}
+	blockIO, _ := network.NewNetworkBlockExecutorIOBuilder().
+		AddMethod("GET").
+		AddHost("https://www.google.com").
+		AddOutputHandler(outputHandler).
+		Build()
+	config := network.NewNetworkBlockExecutorConfig()
+	executor := network.NewNetworkBlockExecutorBuilder(ctx).
+		WithIO(blockIO).
+		WithConfig(config).
+		Build()
+	return executor.Run()
+
 }
 
 func (g *GraphsAPI) GetWorkflowByID(ID string) domain.Workflow {

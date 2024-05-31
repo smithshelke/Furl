@@ -22,6 +22,7 @@ func (a *App) registerRoutes(router *http.ServeMux) {
 
 	blocksController := blocks.NewBlocksController(core.GraphAPI)
 	AddRoute(router, "POST /blocks", blocksController.Create)
+	AddRoute(router, "GET /blocks/execute", blocksController.Execute)
 
 	connectionController := connection.NewConnectionController(core.GraphAPI)
 	AddRoute(router, "POST /connections", connectionController.Create)
